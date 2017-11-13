@@ -1,11 +1,13 @@
-import datetime
-import time
+annee = input ("saisir l'annee a verifier")
 
-print datetime.date.today()
+if annee%4 !=0 :
+    print "l'annee", annee, " n'est pas bissextile"
+elif annee%100 ==0 :
+    if annee%400 ==0:
+        print "l'annee", annee, " est  bissextile"
+    else :
+        print ("l'annee", annee, " n'est pas bissextile")
+else:
+    print ("l'annee", annee, " n'est pas bissextile")
 
-year= input ("veuillez entrer l'annee de birthday  ")
-
-a = datetime.date.today() - datetime.date(year, 1 ,1 )
-
-print a.days/365
 
